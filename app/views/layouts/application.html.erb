@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav>
+  <%= link_to "Home", root_path %>
+  <%= link_to "New Manufacturer", new_manufacturer_path %>
+  <%= link_to "New Car", new_car_path %>
+</nav>
+<p class="notice"><%= flash[:notice] %></p>
 <%= yield %>
 
 </body>

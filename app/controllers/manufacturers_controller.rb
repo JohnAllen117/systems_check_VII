@@ -1,4 +1,4 @@
-class ManufacturerController < ApplicationController
+class ManufacturersController < ApplicationController
   def new
     @manufacturer = Manufacturer.new
   end
@@ -7,11 +7,17 @@ class ManufacturerController < ApplicationController
     @manufacturer = Manufacturer.new(manufacturer_params)
 
     if @manufacturer.save
-      flash[:notice] = "Sucess"
+      flash[:notice] = "Success"
       redirect_to root_path
     else
       flash[:notice] = "Review Problems Below"
       render :new
     end
+  end
+
+  private
+
+  def manufacturer_params
+    params.require(:manufacturer).permit(:name, :country)
   end
 end

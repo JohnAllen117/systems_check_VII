@@ -1,0 +1,6 @@
+<h1>Car List</h1>
+<% if @cars %>
+  <% @cars.each do |car| %>
+    <%= "#{car.color} #{car.manufacturer} - #{car.year}, #{car.mileage} miles" %>
+  <% end %>
+<% end %>

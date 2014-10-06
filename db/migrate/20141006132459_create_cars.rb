@@ -1,10 +1,11 @@
-class CreateCarsTable < ActiveRecord::Migration
+class CreateCars < ActiveRecord::Migration
   def change
-    create_table :cars_tables do |t|
+    create_table :cars do |t|
       t.string :color, null: false
       t.integer :manufacturer_id, null: false
-      t.string :year, null: false
+      t.integer :year, null: false
       t.integer :mileage, null: false
+      t.text :description
     end
   end
 end

@@ -14,6 +14,7 @@ gem 'spring',        group: :development
 gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'launchcop'
+gem 'country_select'
 group :development, :test do
   gem 'capybara'
   gem 'launchy'
