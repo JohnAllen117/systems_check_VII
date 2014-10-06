@@ -1,0 +1,10 @@
+class CreateCarsTable < ActiveRecord::Migration
+  def change
+    create_table :cars_tables do |t|
+      t.string :color, null: false
+      t.integer :manufacturer_id, null: false
+      t.string :year, null: false
+      t.integer :mileage, null: false
+    end
+  end
+end
